@@ -1,37 +1,66 @@
----
----
- <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937; text-align: center;">Nuestros Clientes</h2>
-  
-<section id="clientes" style="background: rgb(255, 255, 255); padding: 4rem 1rem;">
-<div
+
+<section id="clientes" style="background: rgb(255, 255, 255); padding: 4rem 1rem; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937;">Nuestros Clientes</h2>
+  <div
     style="
       display: flex;
       justify-content: center;
       gap: 4rem;
       flex-wrap: wrap;
-      align-items: center;
-    "
+      align-items: center;"
   >
-    <img src="/img/logos/hamburgo.png" alt="hamburgo" style="height: 70px; transition: transform 0.3s ease;" />
-    <img src="/img/logos/socoepa.png" alt="socoepa" style="height: 70px; transition: transform 0.3s ease;" />
-    <img src="/img/logos/mocat.svg" alt="mocat" style="height: 70px; transition: transform 0.3s ease;" />
-    <img src="/img/logos/esssi.png" alt="esssi" style="height: 70px; transition: transform 0.3s ease;" />
+    <img class="fade-in" src="/img/logos/hamburgo.png" alt="hamburgo" />
+    <img class="fade-in" src="/img/logos/socoepa.png" alt="socoepa" />
+    <img class="fade-in" src="/img/logos/mocat.svg" alt="mocat" />
+    <img class="fade-in" src="/img/logos/esssi.png" alt="esssi" />
   </div>
 </section>
 
 <style>
-  #clientes img:hover {
-  transform: scale(1.1) rotate(8deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+/* Estado inicial */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+/* Cuando entra en pantalla */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #clientes img {
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 70px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
 }
 
-
+#clientes img:hover {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
 </style>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.3,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>

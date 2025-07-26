@@ -31,11 +31,45 @@ import Footer from '../components/Footer.astro';
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         z-index: 1000;
       }
+      .hero {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        color: white;
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
   <body>
       <Header client:load />
     <main>
+      <div  class="fade-in">
+      <section id="hero" class="hero">
+        <h1>ICICAF Development Group</h1>
+        <p>Soluciones tecnológicas que hacen crecer tu negocio 🚀</p>
+      </section>
+    </div>
       <Nosotros />
       <Clientes />
       <Contacto />
