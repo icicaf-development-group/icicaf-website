@@ -1,25 +1,240 @@
 ---
+// Nosotros.astro
 ---
-<section id="nosotros" style="padding: 4rem 1rem; background-color: #f9fafb;">
-  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937;">¿Quiénes somos?</h2>
-    <p style="font-size: 1.1rem; color: #4b5563;">
-      En <strong>ICICAF DEVELOPMENT GROUP SPA</strong> somos un equipo dedicado al desarrollo de soluciones de software personalizadas, 
-      enfocadas en calidad, innovación y eficiencia. Trabajamos con empresas de todos los tamaños para transformar procesos y hacer crecer sus ideas a través de la tecnología.
-    </p>
-    <div style="margin-top: 2rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
-      <div style="flex: 1 1 250px; background-color: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <h3 style="color: #111827;">+10 años</h3>
-        <p style="color: #0da76c;">de experiencia</p>
+
+<section id="nosotros" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 fade-in">
+        ¿Quiénes <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">somos?</span>
+      </h2>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8 fade-in"></div>
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed fade-in">
+        En <strong class="text-blue-600">ICICAF DEVELOPMENT GROUP SPA</strong> transformamos ideas en soluciones digitales innovadoras. 
+        Somos tu socio tecnológico para hacer crecer tu negocio en la era digital.
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      
+      <!-- Left Column - Description -->
+      <div class="space-y-8">
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Desarrollamos soluciones de software personalizadas que impulsan el crecimiento empresarial. 
+            Nos enfocamos en la calidad, innovación y eficiencia para transformar procesos y optimizar resultados.
+          </p>
+        </div>
+
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Ser la empresa líder en desarrollo de software en Chile, reconocida por entregar soluciones 
+            tecnológicas que generan valor real y duradero para nuestros clientes.
+          </p>
+        </div>
+
+        <!-- Valores -->
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">Nuestros Valores</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span class="text-gray-700 font-medium">Innovación</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span class="text-gray-700 font-medium">Calidad</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span class="text-gray-700 font-medium">Compromiso</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span class="text-gray-700 font-medium">Excelencia</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="flex: 1 1 250px; background-color: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <h3 style="color: #111827;">100% enfocados</h3>
-        <p style="color: #0da76c;">en tus desafíos</p>
-      </div>
-      <div style="flex: 1 1 250px; background-color: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <h3 style="color: #111827;">Tecnología</h3>
-        <p style="color: #0da76c;">de punta</p>
+
+      <!-- Right Column - Visual Elements -->
+      <div class="relative">
+        <div class="bg-white rounded-3xl p-8 shadow-2xl fade-in">
+          <div class="text-center mb-8">
+            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-bold text-gray-900">Metodología Ágil</h4>
+            <p class="text-gray-600 mt-2">Desarrollo iterativo y colaborativo</p>
+          </div>
+
+          <!-- Process Steps -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4 p-3 bg-blue-50 rounded-xl">
+              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+              <span class="text-gray-700 font-medium">Análisis y Planificación</span>
+            </div>
+            <div class="flex items-center space-x-4 p-3 bg-purple-50 rounded-xl">
+              <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+              <span class="text-gray-700 font-medium">Diseño y Desarrollo</span>
+            </div>
+            <div class="flex items-center space-x-4 p-3 bg-green-50 rounded-xl">
+              <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+              <span class="text-gray-700 font-medium">Pruebas y Despliegue</span>
+            </div>
+            <div class="flex items-center space-x-4 p-3 bg-orange-50 rounded-xl">
+              <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+              <span class="text-gray-700 font-medium">Soporte y Mantenimiento</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+      
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 fade-in group">
+        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">+10 años</h3>
+        <p class="text-green-600 font-medium">de experiencia</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 fade-in group">
+        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">100%</h3>
+        <p class="text-green-600 font-medium">enfocados en ti</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 fade-in group">
+        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">Tecnología</h3>
+        <p class="text-green-600 font-medium">de punta</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 fade-in group">
+        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">Equipo</h3>
+        <p class="text-green-600 font-medium">especializado</p>
+      </div>
+    </div>
+
+    <!-- Technologies Section -->
+    <div class="text-center fade-in">
+      <h3 class="text-3xl font-bold text-gray-900 mb-8">Tecnologías que dominamos</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="px-6 py-3 bg-blue-100 text-blue-800 rounded-full font-medium hover:bg-blue-200 transition-colors duration-300">React</span>
+        <span class="px-6 py-3 bg-green-100 text-green-800 rounded-full font-medium hover:bg-green-200 transition-colors duration-300">Node.js</span>
+        <span class="px-6 py-3 bg-purple-100 text-purple-800 rounded-full font-medium hover:bg-purple-200 transition-colors duration-300">Python</span>
+        <span class="px-6 py-3 bg-yellow-100 text-yellow-800 rounded-full font-medium hover:bg-yellow-200 transition-colors duration-300">JavaScript</span>
+        <span class="px-6 py-3 bg-red-100 text-red-800 rounded-full font-medium hover:bg-red-200 transition-colors duration-300">Java</span>
+        <span class="px-6 py-3 bg-indigo-100 text-indigo-800 rounded-full font-medium hover:bg-indigo-200 transition-colors duration-300">PostgreSQL</span>
+        <span class="px-6 py-3 bg-pink-100 text-pink-800 rounded-full font-medium hover:bg-pink-200 transition-colors duration-300">MongoDB</span>
+        <span class="px-6 py-3 bg-teal-100 text-teal-800 rounded-full font-medium hover:bg-teal-200 transition-colors duration-300">Docker</span>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<style>
+  /* Animaciones de entrada */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Animación de flotación para elementos decorativos */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Efecto de gradiente animado */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .bg-gradient-animated {
+    background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+</style>
+
+<script>
+  // Intersection Observer para las animaciones
+  const observeElements = () => {
+    const faders = document.querySelectorAll('.fade-in');
+    
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (!entry.isIntersecting) return;
+        
+        // Agregar delay escalonado para efecto más dinámico
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150);
+        
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  };
+
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeElements);
+  } else {
+    observeElements();
+  }
+</script>

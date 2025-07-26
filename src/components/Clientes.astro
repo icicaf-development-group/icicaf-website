@@ -1,66 +1,194 @@
+---
+// Clientes.astro
+---
 
-<section id="clientes" style="background: rgb(255, 255, 255); padding: 4rem 1rem; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #1f2937;">Nuestros Clientes</h2>
-  <div
-    style="
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-      flex-wrap: wrap;
-      align-items: center;"
-  >
-    <img class="fade-in" src="/img/logos/hamburgo.png" alt="hamburgo" />
-    <img class="fade-in" src="/img/logos/socoepa.png" alt="socoepa" />
-    <img class="fade-in" src="/img/logos/mocat.svg" alt="mocat" />
-    <img class="fade-in" src="/img/logos/esssi.png" alt="esssi" />
+<section id="clientes" class="bg-gray-50 py-16 px-4 overflow-hidden">
+  <div class="max-w-6xl mx-auto">
+    <!-- Título -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 fade-in">
+        Nuestros <span class="text-blue-600">Clientes</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6 fade-in"></div>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in">
+        Empresas que confían en nuestras soluciones tecnológicas para impulsar su crecimiento
+      </p>
+    </div>
+
+    <!-- Grid de logos con efectos modernos -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
+      
+      <!-- Logo 1 - Hamburgo -->
+      <div class="logo-container fade-in group">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+          <img 
+            src="/img/logos/hamburgo.png" 
+            alt="Hamburgo" 
+            class="h-16 w-auto mx-auto filter grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+        <div class="text-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="text-sm font-medium text-gray-700">Hamburgo</p>
+        </div>
+      </div>
+
+      <!-- Logo 2 - Socoepa -->
+      <div class="logo-container fade-in group">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+          <img 
+            src="/img/logos/socoepa.png" 
+            alt="Socoepa" 
+            class="h-16 w-auto mx-auto filter grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+        <div class="text-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="text-sm font-medium text-gray-700">Socoepa</p>
+        </div>
+      </div>
+
+      <!-- Logo 3 - Mocat -->
+      <div class="logo-container fade-in group">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+          <img 
+            src="/img/logos/mocat.svg" 
+            alt="Mocat" 
+            class="h-16 w-auto mx-auto filter grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+        <div class="text-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="text-sm font-medium text-gray-700">Mocat</p>
+        </div>
+      </div>
+
+      <!-- Logo 4 - Esssi -->
+      <div class="logo-container fade-in group">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+          <img 
+            src="/img/logos/esssi.png" 
+            alt="Esssi" 
+            class="h-16 w-auto mx-auto filter grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+        <div class="text-center mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="text-sm font-medium text-gray-700">Esssi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de estadísticas -->
+    <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="fade-in">
+        <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">50+</div>
+        <div class="text-gray-600 font-medium">Proyectos Completados</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl md:text-4xl font-bold text-purple-600 mb-2">98%</div>
+        <div class="text-gray-600 font-medium">Satisfacción Cliente</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl md:text-4xl font-bold text-green-600 mb-2">24/7</div>
+        <div class="text-gray-600 font-medium">Soporte Técnico</div>
+      </div>
+      <div class="fade-in">
+        <div class="text-3xl md:text-4xl font-bold text-orange-600 mb-2">5+</div>
+        <div class="text-gray-600 font-medium">Años Experiencia</div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="text-center mt-16 fade-in">
+      <p class="text-lg text-gray-600 mb-6">¿Quieres ser nuestro próximo cliente exitoso?</p>
+      <a 
+        href="#contacto" 
+        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
+      >
+        Empezar mi proyecto
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
 
 <style>
-/* Estado inicial */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+  /* Animaciones de entrada */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
 
-/* Cuando entra en pantalla */
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-#clientes img {
-  border-radius: 0.5rem;
-  cursor: pointer;
-  height: 70px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
-}
+  /* Efecto de brillo en hover para los logos */
+  .logo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+  }
 
-#clientes img:hover {
-  transform: scale(1.1) rotate(8deg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+  .logo-container:hover::before {
+    left: 100%;
+  }
+
+  .logo-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Animación de las estadísticas al entrar */
+  @keyframes countUp {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .fade-in.visible .text-3xl,
+  .fade-in.visible .text-4xl {
+    animation: countUp 0.8s ease-out 0.3s both;
+  }
 </style>
 
 <script>
-  const faders = document.querySelectorAll('.fade-in');
+  // Intersection Observer para las animaciones
+  const observeElements = () => {
+    const faders = document.querySelectorAll('.fade-in');
+    
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
 
-  const appearOptions = {
-    threshold: 0.3,
-    rootMargin: "0px 0px -50px 0px"
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (!entry.isIntersecting) return;
+        
+        // Agregar delay escalonado para efecto más dinámico
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 100);
+        
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
   };
 
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observeElements);
+  } else {
+    observeElements();
+  }
 </script>
